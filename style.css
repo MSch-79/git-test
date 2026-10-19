@@ -1,0 +1,374 @@
+ :root {
+        color-scheme: light;
+        --ink: #1d2935;
+        --muted: #586775;
+        --line: #d6dee4;
+        --paper: #fff;
+        --accent: #215d61;
+        --soft: #f2f6f6;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 24px;
+      }
+      body {
+        margin: 0;
+        background: #f6f7f8;
+        color: var(--ink);
+        font:
+          16px/1.55 "Segoe UI",
+          Arial,
+          sans-serif;
+      }
+      main {
+        max-width: 1320px;
+        margin: auto;
+        padding: 44px 28px 70px;
+      }
+      header {
+        padding: 8px 0 28px;
+        border-bottom: 2px solid var(--ink);
+      }
+      .eyebrow {
+        color: var(--accent);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      h1 {
+        font-size: clamp(1.9rem, 4vw, 3rem);
+        line-height: 1.15;
+        margin: 12px 0;
+      }
+      h1 span {
+        font-weight: 400;
+      }
+      h2 {
+        font-size: 1.55rem;
+        margin: 0;
+      }
+      h3 {
+        font-size: 1.05rem;
+        margin: 0 0 10px;
+      }
+      .intro {
+        max-width: 850px;
+        color: var(--muted);
+      }
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 30px;
+        margin-top: 20px;
+      }
+      .stats b {
+        font-size: 1.2rem;
+      }
+      .toolbar {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 24px 0 14px;
+      }
+      button,
+      select {
+        font: inherit;
+        background: white;
+        color: var(--ink);
+        border: 1px solid #bac8d0;
+        border-radius: 5px;
+        padding: 9px 13px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: var(--soft);
+      }
+      button:focus-visible,
+      summary:focus-visible,
+      a:focus-visible,
+      select:focus-visible {
+        outline: 3px solid #2a7983;
+        outline-offset: 3px;
+      }
+      .guide {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: white;
+        padding: 15px 20px;
+        margin: 16px 0;
+      }
+      .guide > summary {
+        font-weight: 650;
+        cursor: pointer;
+      }
+      .guide p {
+        max-width: 1050px;
+      }
+      .muted,
+      .provenance {
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+      .week-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 20px 0 32px;
+      }
+      .week-nav a {
+        color: var(--accent);
+        text-decoration: none;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 5px 10px;
+      }
+      .week {
+        margin: 32px 0 44px;
+        scroll-margin-top: 20px;
+      }
+      .week-heading {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+      }
+      .phase {
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 700;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: white;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+        min-width: 740px;
+      }
+      caption {
+        text-align: left;
+        padding: 13px 15px;
+        background: var(--soft);
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+      th,
+      td {
+        border-bottom: 1px solid var(--line);
+        border-right: 1px solid var(--line);
+        padding: 12px;
+        vertical-align: top;
+        text-align: left;
+      }
+      th:last-child,
+      td:last-child {
+        border-right: 0;
+      }
+      thead th {
+        background: #edf1f3;
+        font-size: 0.82rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      thead th:first-child {
+        width: 105px;
+      }
+      tbody th {
+        font-size: 0.88rem;
+        background: #fafbfc;
+        font-weight: 600;
+      }
+      tbody tr:last-child > * {
+        border-bottom: 0;
+      }
+      td.empty {
+        color: #a3adb5;
+        text-align: center;
+      }
+      .workout > summary {
+        cursor: pointer;
+        list-style-position: inside;
+        line-height: 1.35;
+        padding: 3px 0;
+      }
+      .code {
+        font-weight: 750;
+        color: var(--accent);
+        font-size: 1rem;
+      }
+      .volume {
+        display: block;
+        margin: 4px 0 0 19px;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      .workout-name {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin: 3px 0 0 19px;
+      }
+      .workout[open] > summary {
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--line);
+      }
+      .instruction {
+        font-size: 0.88rem;
+        padding-top: 12px;
+        overflow-wrap: anywhere;
+      }
+      .stage {
+        margin: 0 0 13px;
+      }
+      .stage strong {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--muted);
+      }
+      ol {
+        padding-left: 21px;
+        margin: 5px 0;
+      }
+      li {
+        padding: 2px 0;
+      }
+      .execution {
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+        font-size: 0.82rem;
+      }
+      .provenance {
+        font-size: 0.72rem;
+        margin-bottom: 0;
+      }
+      .weekly {
+        display: flex;
+        gap: 12px 24px;
+        flex-wrap: wrap;
+        padding: 14px 16px;
+        background: white;
+        border: 1px solid var(--line);
+        border-top: 0;
+        border-radius: 0 0 6px 6px;
+        font-size: 0.87rem;
+      }
+      .weekly strong {
+        font-variant-numeric: tabular-nums;
+      }
+      .source-note {
+        padding: 12px 14px;
+        background: #fff8e8;
+        border-left: 3px solid #b38a35;
+        font-size: 0.83rem;
+        margin: 12px 0;
+      }
+      .top-link {
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding-top: 22px;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+      #status {
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+      .skip {
+        position: absolute;
+        left: -9999px;
+      }
+      .skip:focus {
+        position: static;
+        padding: 10px;
+      }
+      @media (max-width: 700px) {
+        main {
+          padding: 24px 14px;
+        }
+        table {
+          min-width: 740px;
+        }
+        th,
+        td {
+          padding: 9px;
+        }
+        .week {
+          margin-bottom: 30px;
+        }
+        .stats {
+          gap: 10px 18px;
+        }
+        .week-heading h2 {
+          font-size: 1.35rem;
+        }
+      }
+      @media print {
+        body {
+          background: white;
+          font-size: 11px;
+        }
+        main {
+          max-width: none;
+          padding: 0;
+        }
+        .toolbar,
+        .week-nav,
+        .top-link,
+        .skip {
+          display: none;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+        .week {
+          break-before: page;
+          margin: 0 0 20px;
+        }
+        .table-wrap {
+          overflow: visible;
+        }
+        table {
+          min-width: 0;
+        }
+        .instruction {
+          font-size: 10px;
+        }
+        .workout-name,
+        .volume {
+          font-size: 10px;
+        }
+        .weekly {
+          font-size: 10px;
+        }
+        tr {
+          break-inside: avoid;
+        }
+        h1 {
+          font-size: 24px;
+        }
+        .guide {
+          break-inside: avoid;
+        }
+        .provenance {
+          font-size: 8px;
+        }
+      }
+  
